@@ -9,7 +9,7 @@
           <g-link to="/investigations/">Toutes les investigations</g-link>
           <div v-if="investigation.promotion">
             &nbsp;/
-            <g-link  
+            <g-link
               :to="`/investigations/?promo=${investigation.promotion.id}`"
             >
               {{ investigation.promotion.nom }}
@@ -47,11 +47,11 @@
         </div>
 
         <div v-if="this.investigation.status !== 'en_preparation'">
-          <h2 class="max-w-screen-md mx-auto text-3xl">Fiche de Probléme</h2>
+          <h2 class="max-w-screen-md mx-auto text-3xl">Fiche de Problème</h2>
           <PageContent v-html="investigation.fiche_de_probleme" />
         </div>
       </div>
-    </div>  
+    </div>
   </Layout>
 </template>
 

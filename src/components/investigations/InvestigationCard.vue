@@ -1,21 +1,21 @@
 <template>
-  <div class="investigation-card-container">    
-      <g-link
-        :to="`/investigation/${id}`"
-      >
-        <div class="investigation-card">
-          <div>
-            <div :class=status class="status">{{ this.stringHelpers.humanizedInvestigationStatus(this.status) }}</div>
-            <div class="pitch" v-html="pitch" />
-          </div>
-          <div class="flex flex-row flex-1 justify-between mt-4">
-            <ul class="collectivites">
-              <li v-for="nom, idx in collectivites" :key=idx>{{nom}}</li>
-            </ul>
-            <div class="title" v-if="name" v-html="name" />
-          </div>
+  <div class="investigation-card-container">
+    <g-link
+      :to="`/investigation/${id}`"
+    >
+      <div class="investigation-card">
+        <div>
+          <div :class=status class="status">{{ this.stringHelpers.humanizedInvestigationStatus(this.status) }}</div>
+          <div class="pitch" v-html="pitch" />
         </div>
-      </g-link>
+        <div class="flex flex-row flex-1 justify-between mt-4">
+          <ul class="collectivites">
+            <li v-for="nom, idx in collectivites" :key=idx>{{nom}}</li>
+          </ul>
+          <div class="title" v-if="name" v-html="name" />
+        </div>
+      </div>
+    </g-link>
   </div>
 </template>
 
