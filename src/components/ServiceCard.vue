@@ -1,5 +1,5 @@
 <template>
-  <div class="service-card-container">    
+  <div class="service-card-container">
     <div class="service-card">
       <g-link
         :to="`/investigations/${id}`"
